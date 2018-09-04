@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * 处理工作室路径信息的 Controller，负责分发请求与响应信息
+ * @author hanyuxiao
+ */
 @RestController
 @RequestMapping("/title")
-public class Controller {
+public class TitleController {
 
     @Autowired
     private TitleQuery query;

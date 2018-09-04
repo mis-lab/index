@@ -10,7 +10,7 @@
         <result property="description" javaType="java.lang.String" column="description" jdbcType="VARCHAR"/>
     </resultMap>
 
-    <select id="selectAllTitle" resultMap="titleDO">
+    <select id="selectAllTitles" resultMap="titleDO">
         SELECT
             id, title_name, picture_url, description
         FROM

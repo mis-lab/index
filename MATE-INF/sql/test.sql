@@ -20,7 +20,10 @@ insert into graduate (id, name, title_id, job_name)
 values (2, '王欣瑜', 2, '云智维新');
 
 insert into graduate (id, name, title_id, job_name)
-values (3, '周军', 1, '京东商城');
+values (8, '张金胜', 1, '阿里巴巴');
+
+insert into graduate (id, name, title_id, job_name)
+values (3, '周军', 1, '京东');
 
 insert into  graduate (id, name, title_id, job_name)
 values (4, '杨青', 1, '有赞');

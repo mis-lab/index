@@ -20,7 +20,7 @@ public class TitleMapperTest {
 
     @Test
     public void getAllTitleInfo() {
-        List<TitleDO> list = mapper.selectAllTitle();
+        List<TitleDO> list = mapper.selectAllTitles();
 
         Assert.assertNotNull(list);
         Assert.assertEquals(3, list.size());

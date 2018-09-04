@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.cqupt.mis.index.graduate.GraduateMapper">
+
+    <resultMap id="graduateDO" type="cn.edu.cqupt.mis.index.entity.GraduateDO">
+        <id property="id" javaType="java.lang.Integer" column="graduate_id" jdbcType="INTEGER"/>
+        <result property="name" javaType="java.lang.String" column="name" jdbcType="VARCHAR"/>
+        <result property="title" javaType="java.lang.String" column="title_name" jdbcType="VARCHAR"/>
+        <result property="jobName" javaType="java.lang.String" column="job_name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectAllGraduates" resultMap="graduateDO">
+        SELECT
+            graduate.id as graduate_id, name, title_name, job_name
+        FROM
+            graduate
+        LEFT JOIN
+            title
+        ON
+            graduate.title_id = title.id;
+    </select>
+</mapper>

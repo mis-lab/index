@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 负责处理工作室路径信息的查询与日志记录
+ * @author hanyuxiao
+ */
 @Service
 public class TitleQuery {
 
@@ -20,7 +24,7 @@ public class TitleQuery {
     public List<TitleDO> getAllTitles() {
         logger.info("getAllTitle");
 
-        List<TitleDO> list = mapper.selectAllTitle();
+        List<TitleDO> list = mapper.selectAllTitles();
 
         if (list == null) {
             list = new ArrayList<>(0);
