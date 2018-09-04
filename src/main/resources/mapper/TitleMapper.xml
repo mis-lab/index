@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.cqupt.mis.index.title.TitleMapper">
+    <resultMap id="titleDO" type="cn.edu.cqupt.mis.index.entity.TitleDO">
+        <id property="id" javaType="java.lang.Integer" column="id" jdbcType="INTEGER"/>
+        <result property="titleName" javaType="java.lang.String" column="title_name" jdbcType="VARCHAR"/>
+        <result property="pictureUrl" javaType="java.lang.String" column="picture_url" jdbcType="VARCHAR"/>
+        <result property="description" javaType="java.lang.String" column="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectAllTitle" resultMap="titleDO">
+        SELECT
+            id, title_name, picture_url, description
+        FROM
+            title;
+    </select>
+</mapper>
