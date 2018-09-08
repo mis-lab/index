@@ -25,7 +25,7 @@ public class GraduateMapperTest {
         List<GraduateDO> list = mapper.selectAllGraduates();
 
         Assert.assertNotNull(list);
-        Assert.assertEquals(7, list.size());
+        Assert.assertEquals(8, list.size());
     }
 
 }

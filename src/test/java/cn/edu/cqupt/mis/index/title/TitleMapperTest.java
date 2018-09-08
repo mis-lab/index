@@ -29,18 +29,18 @@ public class TitleMapperTest {
             if (titleDO.getId() == 1) {
                 Assert.assertEquals("Java 开发工程师", titleDO.getTitleName());
                 Assert.assertEquals("主要负责 Web 服务端开发", titleDO.getDescription());
-                Assert.assertNull(titleDO.getPictureUrl());
+                Assert.assertEquals("/images/Java.png", titleDO.getPictureUrl());
 
             }
             else if (titleDO.getId() == 2) {
                 Assert.assertEquals("JavaScript 开发工程师", titleDO.getTitleName());
                 Assert.assertEquals("主要负责 Web 客户端开发", titleDO.getDescription());
-                Assert.assertNull(titleDO.getPictureUrl());
+                Assert.assertEquals("/images/JavaScript.png", titleDO.getPictureUrl());
             }
             else if (titleDO.getId() == 3) {
                 Assert.assertEquals("产品经理", titleDO.getTitleName());
                 Assert.assertEquals("主要负责产品设计与运营", titleDO.getDescription());
-                Assert.assertNull(titleDO.getPictureUrl());
+                Assert.assertEquals("/images/Pm.png", titleDO.getPictureUrl());
             }
         }
     }
