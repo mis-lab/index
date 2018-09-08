@@ -40,7 +40,7 @@ public class TitleMapperTest {
             else if (titleDO.getId() == 3) {
                 Assert.assertEquals("产品经理", titleDO.getTitleName());
                 Assert.assertEquals("主要负责产品设计与运营", titleDO.getDescription());
-                Assert.assertEquals("/images/Pm.png", titleDO.getPictureUrl());
+                Assert.assertEquals("/images/PM.png", titleDO.getPictureUrl());
             }
         }
     }
