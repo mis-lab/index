@@ -31,18 +31,18 @@ public class TitleQueryTest {
             if (titleDO.getId() == 1) {
                 Assert.assertEquals("Java 开发工程师", titleDO.getTitleName());
                 Assert.assertEquals("主要负责 Web 服务端开发", titleDO.getDescription());
-                Assert.assertEquals("/images/Java.png", titleDO.getPictureUrl());
+                Assert.assertEquals("/images/Java.svg", titleDO.getPictureUrl());
 
             }
             else if (titleDO.getId() == 2) {
                 Assert.assertEquals("JavaScript 开发工程师", titleDO.getTitleName());
                 Assert.assertEquals("主要负责 Web 客户端开发", titleDO.getDescription());
-                Assert.assertEquals("/images/JavaScript.png", titleDO.getPictureUrl());
+                Assert.assertEquals("/images/JavaScript.svg", titleDO.getPictureUrl());
             }
             else if (titleDO.getId() == 3) {
                 Assert.assertEquals("产品经理", titleDO.getTitleName());
                 Assert.assertEquals("主要负责产品设计与运营", titleDO.getDescription());
-                Assert.assertEquals("/images/PM.png", titleDO.getPictureUrl());
+                Assert.assertEquals("/images/PM.svg", titleDO.getPictureUrl());
             }
         }
     }

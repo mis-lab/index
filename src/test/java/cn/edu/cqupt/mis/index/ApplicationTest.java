@@ -1,4 +1,4 @@
-package cn.edu.cqupt.mid.index;
+package cn.edu.cqupt.mis.index;
 
 import cn.edu.cqupt.mis.index.Application;
 import org.junit.Test;

@@ -14,19 +14,19 @@ apis
         {
             "id":1,
             "titleName":"Java 开发工程师",
-            "pictureUrl":"/images/Java.png",
+            "pictureUrl":"Java.svg",
             "description":"主要负责 Web 服务端开发"
         },
         {
             "id":2,
             "titleName":"JavaScript 开发工程师",
-            "pictureUrl":"/images/JavaScript.png",
+            "pictureUrl":"JavaScript.svg",
             "description":"主要负责 Web 客户端开发"
         },
         {
             "id":3,
             "titleName":"产品经理",
-            "pictureUrl":"/images/PM.png",
+            "pictureUrl":"PM.svg",
             "description":"主要负责产品设计与运营"
         }
     ]
@@ -58,8 +58,8 @@ apis
 
 ## 获取工作室图标
 
-`/images/icon.png`
+`/images/icon.svg`
 
 ## 获取工作室图标（经过压缩后的）
 
-`/images/icon-small.png`
+`/images/icon-small.svg`
