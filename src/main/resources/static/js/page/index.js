@@ -171,7 +171,7 @@ option = {
 
 
 // 请求毕业生去向数据
-const graduate = fetch('https://easy-mock.com/mock/5b923795dd287013d019e28a/mis-index/graduate/jobDistribute')
+const graduate = fetch('http://localhost:8888/index/graduate/jobDistribute')
   .then(response => response.json())
   .then(responsedata => responsedata.data)
   .catch((error) => {
@@ -210,7 +210,7 @@ if (option && typeof option === 'object') {
 const end = document.getElementById('end');
 const front = document.getElementById('front');
 const product = document.getElementById('product');
-const direction = fetch('http://172.22.1.154:8888/index/title/all')
+const direction = fetch('http://localhost:8888/index/title/all')
   .then(response => response.json())
   .then(responsedata => responsedata.info)
   .catch((error) => {
