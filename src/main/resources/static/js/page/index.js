@@ -65,7 +65,7 @@ option = {
       color: '#fff',
       fontSize: 14,
     },
-    max: 8,
+    max: 6,
     splitLine: {
       show: false,
     },
@@ -171,21 +171,21 @@ option = {
 
 
 // 请求毕业生去向数据
-const graduate = fetch('http://172.22.1.154:8888/index/graduate/jobDistribute')
+const graduate = fetch('https://easy-mock.com/mock/5b923795dd287013d019e28a/mis-index/graduate/jobDistribute')
   .then(response => response.json())
-  .then(responsedata => responsedata.info)
+  .then(responsedata => responsedata.data)
   .catch((error) => {
     console.error(error);
   });
 //  利用返回的promise处理
 graduate
-  .then((info) => {
+  .then((data) => {
     const personNum = [];
-    const graData = Object.entries(info);
+    const graData = Object.entries(data);
     const getdata = graData.slice();
 
     for (const value of getdata) {
-      const firmNum = Number.parseInt(Math.random() * 5 + 0.99999, 10);
+      const firmNum = Number.parseFloat(Math.random() * 5 + 0.555555, 10);
       value.splice(0, 1, firmNum);
       personNum.push(value);
     }
