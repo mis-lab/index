@@ -1,7 +1,6 @@
 // echarts生成散点图
 const dom = document.getElementById('echarts');
 const myChart = echarts.init(dom);
-// const app = {};
 let option = null;
 const dataALIBB = [];
 const dataYZWX = [];
@@ -172,21 +171,17 @@ option = {
 
 
 // 请求毕业生去向数据
-const graduate = fetch('http://172.22.1.154:8888/index/graduate/jobDistribute', {
-  method: 'GET',
-  mode: 'cors',
-  cache: 'default',
-})
+const graduate = fetch('http://172.22.1.154:8888/index/graduate/jobDistribute')
   .then(response => response.json())
-  .then(responsedata => responsedata.data)
+  .then(responsedata => responsedata.info)
   .catch((error) => {
     console.error(error);
   });
 //  利用返回的promise处理
 graduate
-  .then((data) => {
+  .then((info) => {
     const personNum = [];
-    const graData = Object.entries(data);
+    const graData = Object.entries(info);
     const getdata = graData.slice();
 
     for (const value of getdata) {
@@ -215,21 +210,17 @@ if (option && typeof option === 'object') {
 const end = document.getElementById('end');
 const front = document.getElementById('front');
 const product = document.getElementById('product');
-const direction = fetch('http://172.22.1.154:8888/index/title/all', {
-  method: 'GET',
-  mode: 'cors',
-  cache: 'default',
-})
+const direction = fetch('http://172.22.1.154:8888/index/title/all')
   .then(response => response.json())
-  .then(responsedata => responsedata.data)
+  .then(responsedata => responsedata.info)
   .catch((error) => {
     console.error(error);
   });
 
 // 利用返回的promise处理
 direction
-  .then((data) => {
-    const dirData = JSON.parse(JSON.stringify(data));
+  .then((info) => {
+    const dirData = JSON.parse(JSON.stringify(info));
     end.innerHTML = `<h3>${dirData[0].titleName}</h3> <p>${dirData[0].description}</p>`;
     front.innerHTML = `<h3>${dirData[1].titleName}</h3> <p>${dirData[0].description}</p>`;
     product.innerHTML = `<h3>${dirData[2].titleName}</h3> <p>${dirData[0].description}</p>`;
