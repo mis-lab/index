@@ -8,7 +8,7 @@ const dataJD = [];
 const dataZJTD = [];
 const dataKDXF = [];
 const dataYZ = [];
-const firm = [dataALIBB, dataYZWX, dataJD, dataZJTD, dataKDXF, dataYZ];
+const firm = [dataZJTD, dataYZWX, dataKDXF, dataALIBB, dataYZ, dataJD];
 
 const schema = [
   { name: 'string', index: 0, text: '公司' },
