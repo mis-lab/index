@@ -171,9 +171,9 @@ option = {
 
 
 // 请求毕业生去向数据
-const graduate = fetch('http://localhost:8888/index/graduate/jobDistribute')
+const graduate = fetch('/index/graduate/jobDistribute')
   .then(response => response.json())
-  .then(responsedata => responsedata.data)
+  .then(responsedata => responsedata.info)
   .catch((error) => {
     console.error(error);
   });
@@ -210,7 +210,7 @@ if (option && typeof option === 'object') {
 const end = document.getElementById('end');
 const front = document.getElementById('front');
 const product = document.getElementById('product');
-const direction = fetch('http://localhost:8888/index/title/all')
+const direction = fetch('/index/title/all')
   .then(response => response.json())
   .then(responsedata => responsedata.info)
   .catch((error) => {
