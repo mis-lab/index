@@ -222,8 +222,8 @@ direction
   .then((info) => {
     const dirData = JSON.parse(JSON.stringify(info));
     end.innerHTML = `<h3>${dirData[0].titleName}</h3> <p>${dirData[0].description}</p>`;
-    front.innerHTML = `<h3>${dirData[1].titleName}</h3> <p>${dirData[0].description}</p>`;
-    product.innerHTML = `<h3>${dirData[2].titleName}</h3> <p>${dirData[0].description}</p>`;
+    front.innerHTML = `<h3>${dirData[1].titleName}</h3> <p>${dirData[1].description}</p>`;
+    product.innerHTML = `<h3>${dirData[2].titleName}</h3> <p>${dirData[2].description}</p>`;
   })
   .catch((error) => {
     console.log(error);
