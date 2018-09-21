@@ -10,10 +10,12 @@
         <result property="description" javaType="java.lang.String" column="description" jdbcType="VARCHAR"/>
     </resultMap>
 
-    <select id="selectAllTitles" resultMap="titleDO">
+    <select id="selectAllTitlesWhichCanRead" resultMap="titleDO">
         SELECT
             id, title_name, picture_url, description
         FROM
-            title;
+            title
+        WHERE
+            can_read = true ;
     </select>
 </mapper>

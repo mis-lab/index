@@ -15,5 +15,5 @@ public interface TitleMapper {
      * 获取数据库当中所有方向信息
      * @return 所有方向的信息
      */
-    List<TitleDO> selectAllTitles();
+    List<TitleDO> selectAllTitlesWhichCanRead();
 }

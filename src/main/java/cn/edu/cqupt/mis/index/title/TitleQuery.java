@@ -24,7 +24,7 @@ public class TitleQuery {
     public List<TitleDO> getAllTitles() {
         logger.info("getAllTitle");
 
-        List<TitleDO> list = mapper.selectAllTitles();
+        List<TitleDO> list = mapper.selectAllTitlesWhichCanRead();
 
         if (list == null) {
             list = new ArrayList<>(0);

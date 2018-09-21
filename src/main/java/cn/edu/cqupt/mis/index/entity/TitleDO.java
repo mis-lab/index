@@ -8,6 +8,7 @@ public class TitleDO {
 
     /**
      * title 的唯一 id
+     * 从 0 开始自增长
      */
     private int id;
     /**
@@ -19,7 +20,7 @@ public class TitleDO {
      */
     private String pictureUrl;
     /**
-     * title 的描述
+     * 此 title 在我们工作室的主要工作
      */
     private String description;
 
