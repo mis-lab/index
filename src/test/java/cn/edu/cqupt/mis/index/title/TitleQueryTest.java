@@ -22,7 +22,7 @@ public class TitleQueryTest {
 
     @Test
     public void getAllTitle() {
-        List<TitleDO> list = query.getAllTitles();
+        List<TitleDO> list = query.getAllCanReadTitles();
         Assert.assertNotNull(list);
         Assert.assertEquals(3, list.size());
     }

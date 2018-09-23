@@ -8,14 +8,15 @@
         <result property="titleName" javaType="java.lang.String" column="title_name" jdbcType="VARCHAR"/>
         <result property="pictureUrl" javaType="java.lang.String" column="picture_url" jdbcType="VARCHAR"/>
         <result property="description" javaType="java.lang.String" column="description" jdbcType="VARCHAR"/>
+        <result property="canRead" javaType="java.lang.Boolean" column="can_read" jdbcType="BOOLEAN"/>
     </resultMap>
 
-    <select id="selectAllTitlesWhichCanRead" resultMap="titleDO">
+    <select id="selectTitleByCanRead" resultMap="titleDO">
         SELECT
             id, title_name, picture_url, description
         FROM
             title
         WHERE
-            can_read = true ;
+            can_read = #{canRead};
     </select>
 </mapper>

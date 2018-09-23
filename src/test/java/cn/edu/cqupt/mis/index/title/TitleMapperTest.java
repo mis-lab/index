@@ -19,9 +19,16 @@ public class TitleMapperTest {
     TitleMapper mapper;
 
     @Test
-    public void getAllTitleInfo() {
-        List<TitleDO> list = mapper.selectAllTitlesWhichCanRead();
+    public void getAllTitleInfo_false() {
+        List<TitleDO> list = mapper.selectTitleByCanRead(true);
         Assert.assertNotNull(list);
         Assert.assertEquals(3, list.size());
+    }
+
+    @Test
+    public void getAllTitleInfo_true() {
+        List<TitleDO> list = mapper.selectTitleByCanRead(false);
+        Assert.assertNotNull(list);
+        Assert.assertEquals(0, list.size());
     }
 }

@@ -4,7 +4,7 @@ apis
 
 ## 获取所有方向
 
-`/title/all`
+`GET /title/`
 
 示例数据如下：
 
@@ -37,7 +37,7 @@ apis
 
 ## 毕业成员去向分布
 
-`/graduate/jobDistribute`
+`GET /graduate/jobDistribute`
 
 示例数据如下：
 

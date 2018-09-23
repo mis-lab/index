@@ -210,7 +210,7 @@ if (option && typeof option === 'object') {
 const end = document.getElementById('end');
 const front = document.getElementById('front');
 const product = document.getElementById('product');
-const direction = fetch('/index/title/all')
+const direction = fetch('/index/title/')
   .then(response => response.json())
   .then(responsedata => responsedata.info)
   .catch((error) => {

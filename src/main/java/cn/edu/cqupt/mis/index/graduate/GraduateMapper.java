@@ -14,6 +14,7 @@ public interface GraduateMapper {
 
     /**
      * 从数据库当中选取所有的已经毕业了的同学的信息
+     *
      * @return 所有已经毕业了的同学的信息
      */
     List<GraduateDO> selectAllGraduates();

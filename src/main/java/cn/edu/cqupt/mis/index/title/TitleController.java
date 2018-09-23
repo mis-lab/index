@@ -20,9 +20,13 @@ public class TitleController {
     @Autowired
     private TitleQuery query;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    /**
+     * 获取工作室能够对外展示的发展方向的信息，比如 Java 开发工程师
+     * @return
+     */
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public HashMap<String, List<TitleDO>> getAllTitle() {
-        List<TitleDO> titleList  = query.getAllTitles();
+        List<TitleDO> titleList  = query.getAllCanReadTitles();
         HashMap<String, List<TitleDO>> result = new HashMap<>(1);
         result.put("info", titleList);
         return result;
