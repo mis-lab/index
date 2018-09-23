@@ -9,11 +9,13 @@
         <result property="name" javaType="java.lang.String" column="name" jdbcType="VARCHAR"/>
         <result property="title" javaType="java.lang.String" column="title_name" jdbcType="VARCHAR"/>
         <result property="jobName" javaType="java.lang.String" column="job_name" jdbcType="VARCHAR"/>
+        <result property="titleId" javaType="java.lang.Integer" column="title_id" jdbcType="INTEGER"/>
+        <result property="studentId" javaType="java.lang.String" column="student_id" jdbcType="INTEGER"/>
     </resultMap>
 
     <select id="selectAllGraduates" resultMap="graduateDO">
         SELECT
-            graduate.id as graduate_id, name, title_name, job_name
+            graduate.id as graduate_id, name, title_name, job_name, title_id, student_id
         FROM
             graduate
         LEFT JOIN
