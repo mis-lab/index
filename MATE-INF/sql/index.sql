@@ -21,7 +21,6 @@ create table graduate (
   name varchar(255) comment '已经毕业人员的名字',
   title_id int comment '这个同学之前在工作室是什么方向的',
   job_name varchar(255) comment '毕业后所在的公司的名称',
-  unique (student_id),
   foreign key (title_id) references title(id)
 );
 
