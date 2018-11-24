@@ -19,6 +19,11 @@ public class GraduateController {
     @Autowired
     private GraduateQuery query;
 
+    /**
+     * 获取毕业同学的去向统计，比如在京东有多少人，在阿里巴巴有多少人
+     *
+     * @return 京东有多少人，阿里巴巴有多少人
+     */
     @RequestMapping(value = "/jobDistribute", method = RequestMethod.GET)
     public Map<String, Map<String, Integer>> getGraduateJobDistribute () {
         Map<String, Integer> info = query.getJobDistributeInfo();

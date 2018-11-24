@@ -5,9 +5,9 @@ package cn.edu.cqupt.mis.index.entity;
  * @author hanyuxiao
  */
 public class TitleDO {
-
     /**
      * title 的唯一 id
+     * 从 0 开始自增长
      */
     private int id;
     /**
@@ -19,9 +19,23 @@ public class TitleDO {
      */
     private String pictureUrl;
     /**
-     * title 的描述
+     * 此 title 在我们工作室的主要工作
      */
     private String description;
+    /**
+     * 这个属性用来表示这一个发展方向在工作室是不是需要对外展示
+     * true 表示需要对外展示，比如现在的 Java JavaScript
+     * false 表示不展示，比如现在的测试运维工程师
+     */
+    private boolean canRead;
+
+    public boolean isCanRead() {
+        return canRead;
+    }
+
+    public void setCanRead(boolean canRead) {
+        this.canRead = canRead;
+    }
 
     public int getId() {
         return id;
